@@ -1,0 +1,26 @@
+{
+  "name": "generator-cairn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dazld/generator-cairn.git"
+  },
+  "author": "Dan Peddle <dan@flarework.com>",
+  "license": "MIT",
+  "keywords": [
+   "yeoman-generator",
+   "react",
+   "browserify",
+   "express",
+   "gulp"
+ ],
+  "bugs": {
+    "url": "https://github.com/dazld/generator-cairn/issues"
+  },
+  "homepage": "https://github.com/dazld/generator-cairn#readme"
+}

@@ -1,0 +1,39 @@
+---
+
+env:
+    browser: true
+    node: true
+    es6: true
+
+parserOptions:
+    sourceType: module
+
+ecmaFeatures:
+    jsx: true
+    modules: true
+
+rules:
+    # ERRORS
+    space-before-blocks: 2
+    no-trailing-spaces: 2
+    indent: [2, 4]
+    brace-style: 2
+    keyword-spacing: 2
+    strict: [2, "global"]
+    comma-dangle: [2, "never"]
+    no-unused-expressions: 2
+    block-scoped-var: 2
+    eol-last: 2
+    dot-notation: 2
+    consistent-return: 2
+    no-unused-vars: [2, args: none]
+    quotes: [2, 'single', 'avoid-escape']
+    no-use-before-define: 2
+    comma-spacing: [0, {"before": true, "after": true}]
+
+    # WARNINGS
+    max-len: [1,120]
+
+    # DISABLED
+    no-underscore-dangle: 0
+    new-cap: 0
