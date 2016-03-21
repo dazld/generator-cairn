@@ -8,6 +8,8 @@ import sass from 'gulp-sass';
 import base64 from 'gulp-base64';
 import cmq from 'gulp-combine-mq';
 import autoprefixer from 'gulp-autoprefixer';
+import csso from 'gulp-csso';
+import liveReload from 'gulp-livereload';
 
 import config from '../config';
 
@@ -24,13 +26,13 @@ gulp.task('sass', ['clean:css'], function() {
                 maxImageSize: 5000,
                 extensions: ['svg', 'png', 'jpg', /\.jpg#datauri$/i]
             }))
-            .pipe(autoprefixer(BROWSER_CONFIG))
+            .pipe(autoprefixer(config.BROWSER_CONFIG))
             .pipe(cmq({
                 beautify: false
             }))
             .pipe(csso())
             .pipe(size())
             .pipe(sourcemaps.write())
-            .pipe(gulp.dest(STATIC_CSS))
-            .pipe(liveReload({port: LIVERELOAD_PORT}))
+            .pipe(gulp.dest(config.STATIC_CSS))
+            .pipe(liveReload({ port: config.LIVERELOAD_PORT}))
 });
