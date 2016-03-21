@@ -1,7 +1,17 @@
 {
     "extends": "airbnb",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        },
+    },
     "rules": {
         "comma-dangle": 0,
-        "indent":[2,4, {"SwitchCase": 1}]
+        "func-names": 0,
+        "prefer-rest-params": 0,
+        "space-before-function-paren": 0,
+        "indent": [2, 4, {
+            "SwitchCase": 1
+        }]
     }
 }

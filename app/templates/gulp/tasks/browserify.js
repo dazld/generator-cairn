@@ -14,7 +14,6 @@ import gutil from 'gulp-util';
 
 import gulp from 'gulp';
 
-console.log(config)
 
 const baseOptions = {
     entries: config.ASSETS_JS_MAIN,
@@ -22,7 +21,7 @@ const baseOptions = {
     cache: {},
     packageCache: {},
     plugin: []
-}
+};
 
 if (!config.IS_PRODUCTION) {
     baseOptions.plugin = baseOptions.plugin.concat(watchify);
@@ -31,7 +30,7 @@ if (!config.IS_PRODUCTION) {
 const compiler = browserify(baseOptions);
 
 compiler.transform('babelify');
-compiler.transform('envify',{
+compiler.transform('envify', {
     global: true,
     NODE_ENV: process.env.NODE_ENV,
     _: 'purge'
@@ -40,7 +39,7 @@ compiler.transform('envify',{
 function bundle() {
     return compiler.bundle()
                     .on('error', notify.onError('Error: <%%= error.message %>'))
-                    .on('error', function(err) {
+                    .on('error', function errorHandler(err) {
                         gutil.log(gutil.colors.red(`Error (${err.plugin}) - ${err.message}`));
                         this.emit('end');
                     })
@@ -60,6 +59,4 @@ compiler.on('update', function() {
     bundle();
 });
 
-gulp.task('js', ['clean:js'], function() {
-    return bundle();
-});
+gulp.task('js', ['clean:js'], () => bundle());

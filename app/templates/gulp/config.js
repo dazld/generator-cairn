@@ -1,15 +1,15 @@
-import {join} from 'path';
+import { join } from 'path';
 
 // general folder for assets
 const ASSETS_DIR = './assets';
 
-const ASSETS_SASS = join(ASSETS_DIR,'sass');
+const ASSETS_SASS = join(ASSETS_DIR, 'sass');
 const ASSETS_SASS_MAIN = join(ASSETS_SASS, 'main.scss');
 
-const ASSETS_JS = join(ASSETS_DIR,'js');
+const ASSETS_JS = join(ASSETS_DIR, 'js');
 const ASSETS_JS_MAIN = join(ASSETS_JS, 'index.js'); // client side entry point
 
-const ASSETS_IMG = join(ASSETS_DIR,'img');
+const ASSETS_IMG = join(ASSETS_DIR, 'img');
 const ASSETS_FONTS = join(ASSETS_DIR, 'fonts');
 
 const STATIC_DIR = 'static';
