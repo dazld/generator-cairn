@@ -1,7 +1,7 @@
 import {join} from 'path';
 
 // general folder for assets
-const ASSETS_DIR = 'assets';
+const ASSETS_DIR = './assets';
 
 const ASSETS_SASS = join(ASSETS_DIR,'sass');
 const ASSETS_SASS_MAIN = join(ASSETS_SASS, 'main.scss');

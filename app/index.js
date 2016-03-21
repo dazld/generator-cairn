@@ -5,7 +5,7 @@ const fs = require('fs');
 module.exports = generators.Base.extend({
     constructor: function() {
         generators.Base.apply(this, arguments);
-        this.config.save();
+        // this.config.save();
     },
     initializing: function() {
         this.log('I am a full stack react, redux & express generator.')
@@ -14,10 +14,11 @@ module.exports = generators.Base.extend({
         var done = this.async();
         this.prompt([{
             type    : 'input',
-            name    : 'name',
+            name    : 'appname',
             message : 'Your project name',
             default : this.appname // Default to current folder name
         }], function (answers) {
+            this.appname = answers.appname;
             done();
         }.bind(this));
     },

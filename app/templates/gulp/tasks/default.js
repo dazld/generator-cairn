@@ -1,4 +1,4 @@
 import gulp from 'gulp';
-import config, {IS_PRODUCTION} from '../config';
+import config from '../config';
 
-gulp.task('default', ['no','browserify']);
+gulp.task('default', ['clean']);
