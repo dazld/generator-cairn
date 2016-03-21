@@ -1,0 +1,15 @@
+{
+    "name": "<%= title %>",
+    "version": "1.0.0",
+    "description": "Project generated with yeoman",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Change Me",
+    "license": "ISC",
+    "dependencies": {
+        "asciify": "^1.3.5",
+        "yeoman-generator": "^0.22.5"
+    }
+}

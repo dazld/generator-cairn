@@ -1,19 +1,13 @@
 const generators = require('yeoman-generator');
 const path = require('path');
 const fs = require('fs');
-const basePath = path.resolve(__dirname, 'template');
 
 module.exports = generators.Base.extend({
     constructor: function() {
         generators.Base.apply(this, arguments);
-        this.sourceRoot(basePath);
-        // this.log()
-        // console.log(this.files)
-
         this.config.save();
     },
     initializing: function() {
-        // ascii('cairn', console.log);
         this.log('I am a full stack react, redux & express generator.')
     },
     prompting: function() {
@@ -24,27 +18,28 @@ module.exports = generators.Base.extend({
             message : 'Your project name',
             default : this.appname // Default to current folder name
         }], function (answers) {
-            this.log(answers.name);
             done();
         }.bind(this));
     },
     writing: function() {
-        const files = fs.readdirSync(this.templatePath());
 
+        const files = fs.readdirSync(this.templatePath());
         const tplPath = this.templatePath();
+        const data = {
+            title: this.appname
+        };
 
         const processFile =  (root, filePath) => {
             const fullPath = path.resolve(root, filePath);
             const stats = fs.statSync(fullPath);
+            const destFolder = root.replace(this.templatePath(),'');
 
             if (stats.isDirectory()) {
-                console.log('directory:', fullPath)
                 fs.readdirSync(fullPath).forEach(processFile.bind(null, fullPath));
             } else {
-                console.log(stats.isDirectory(), fullPath);
+                const destPath = path.join('.', destFolder, filePath);
+                this.template(fullPath, destPath, data);
             }
-
-
         };
 
         files.forEach(processFile.bind(null, tplPath));
