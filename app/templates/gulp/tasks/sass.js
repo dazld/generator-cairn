@@ -11,6 +11,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import csso from 'gulp-csso';
 import liveReload from 'gulp-livereload';
 import size from 'gulp-size';
+import gulpif from 'gulp-if';
 
 import config from '../config';
 
@@ -33,7 +34,7 @@ gulp.task('sass', ['clean:css'], function() {
             }))
             .pipe(csso())
             .pipe(size())
-            .pipe(sourcemaps.write())
+            .pipe(gulpif(!config.IS_PRODUCTION, sourcemaps.write()))
             .pipe(gulp.dest(config.STATIC_CSS))
             .pipe(liveReload({ port: config.LIVERELOAD_PORT }));
 });

@@ -11,5 +11,6 @@ gulp.task('clean:js', makeCleaner(glob(config.STATIC_JS)));
 gulp.task('clean:css', makeCleaner(glob(config.STATIC_CSS)));
 gulp.task('clean:img', makeCleaner(glob(config.STATIC_IMG)));
 gulp.task('clean:fonts', makeCleaner(glob(config.STATIC_FONTS)));
+gulp.task('clean:manifest', makeCleaner(`${config.STATIC_DIR}/manifest.json`));
 
-gulp.task('clean', ['clean:js', 'clean:css', 'clean:img', 'clean:fonts']);
+gulp.task('clean', ['clean:js', 'clean:css', 'clean:img', 'clean:fonts', 'clean:manifest']);
