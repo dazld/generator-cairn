@@ -26,7 +26,7 @@ Make a new directory, cd into it.
 
 ## Updating
 
-`npm udpate -g git+ssh://git@stash.akqa.net:7999/glwd/generator-cairn.git#master` - if the package.json file is newer on master than on local, you get the new version.
+`npm install -g git+ssh://git@stash.akqa.net:7999/glwd/generator-cairn.git#master` - if the package.json file is newer on master than on local, you get the new version.
 
 
 ## Features
