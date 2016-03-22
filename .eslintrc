@@ -13,6 +13,8 @@
         "space-before-function-paren": 0,
         "indent": [2, 4, {
             "SwitchCase": 1
-        }]
+        }],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-closing-bracket-location": 0
     }
 }
