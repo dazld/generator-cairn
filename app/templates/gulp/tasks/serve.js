@@ -6,21 +6,21 @@ import { spawn } from 'child_process';
 
 let currentProcess = null;
 
-function checkStatus(chunk) {
+function checkForBoot(chunk) {
     const chunkAsString = chunk.toString();
     if (/Magic/.test(chunkAsString)) {
-        currentProcess.removeListener('data', checkStatus);
+        currentProcess.removeListener('data', checkForBoot);
         log(colors.green('Server up'));
         liveReload();
     }
 }
-function handleError(code) {
+function handleClose(code) {
     if (code === 8) {
         log('Error detected, waiting for changes...');
     } else {
         log('node closed: ', code);
     }
-    currentProcess.removeListener('close', handleError);
+    currentProcess.removeListener('close', handleClose);
 }
 
 gulp.task('serve', function() {
@@ -28,8 +28,8 @@ gulp.task('serve', function() {
         currentProcess.kill();
     }
     currentProcess = spawn('node', ['server/dev-server']);
-    currentProcess.on('close', handleError);
-    currentProcess.stdout.on('data', checkStatus);
+    currentProcess.on('close', handleClose);
+    currentProcess.stdout.on('data', checkForBoot);
     currentProcess.stdout.pipe(process.stdout);
     currentProcess.stderr.pipe(process.stderr);
 });
