@@ -17,7 +17,7 @@ import config from '../config';
 
 gulp.task('sass', ['clean:css'], function() {
     return gulp.src(config.ASSETS_SASS_MAIN)
-            .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+            .pipe(plumber({ errorHandler: notify.onError('Error: <%%= error.message %>') }))
             .on('error', function(err) {
                 gutil.log(gutil.colors.red(`Error (${err.plugin}) - ${err.message}`));
                 this.emit('end');
