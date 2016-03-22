@@ -7,4 +7,5 @@ gulp.task('watch', function() {
     gulp.watch(`${config.ASSETS_SASS}/**/*.scss`, ['sass']);
     gulp.watch(`${config.ASSETS_IMG}/**/*`, ['images']);
     gulp.watch(`${config.ASSETS_FONTS}/**/*`, ['fonts']);
+    gulp.watch(`${config.SERVER_DIR}/**/*`, ['serve']);
 });

@@ -1,9 +1,10 @@
 // mainly here to
 
+import assetPath from './lib/asset-path';
 import React, { Component } from 'react';
-
+// alert();
 function a() {
-    return 1 + 1;
+    return 1 + assetPath(1);
 }
 
 switch (a) {

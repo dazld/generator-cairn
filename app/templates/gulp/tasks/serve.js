@@ -11,7 +11,7 @@ function checkForBoot(chunk) {
     if (/Magic/.test(chunkAsString)) {
         currentProcess.removeListener('data', checkForBoot);
         log(colors.green('Server up'));
-        liveReload();
+        liveReload.reload();
     }
 }
 function handleClose(code) {

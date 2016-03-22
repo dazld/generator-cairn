@@ -47,8 +47,8 @@ function bundle() {
                     .pipe(buffer())
                     .pipe(gulpif(config.IS_PRODUCTION, uglify()))
                     .pipe(size())
-                    .pipe(gulp.dest(config.STATIC_JS))
-                    .pipe(liveReload());
+                    .pipe(gulp.dest(config.STATIC_JS));
+                    // .pipe(liveReload()); // @todo figure out a better way of refreshing server
 }
 
 compiler.on('log', gutil.log);
@@ -57,6 +57,7 @@ compiler.on('error', gutil.log);
 compiler.on('update', function() {
     console.log.apply(console, ['Updated: '].concat([].slice.call(arguments)));
     bundle();
+    gulp.run('serve');
 });
 
 gulp.task('js', ['clean:js'], () => bundle());
