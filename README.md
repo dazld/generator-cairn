@@ -20,8 +20,10 @@ Check everything is working: `yo --help` - should see a list of generators, and 
 
 Make a new directory, cd into it.
 
-`yo cairn` - give the project a name
+`yo cairn` - give the project a name.
+
 `npm install` - should add this to yeoman, but it takes _forever_ :s
+
 `gulp` - default task runs dev server, watches and builds.
 
 ## Updating
