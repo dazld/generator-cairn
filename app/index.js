@@ -8,7 +8,7 @@ module.exports = generators.Base.extend({
         // this.config.save();
     },
     initializing: function() {
-        this.log('I am a full stack react, redux & express generator.')
+        this.log('I am a full stack react, redux & express generator.');
     },
     prompting: function() {
         var done = this.async();

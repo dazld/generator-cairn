@@ -1,6 +1,6 @@
 {
     "name": "generator-cairn",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A full stack of rocks",
     "main": "index.js",
     "scripts": {
@@ -8,9 +8,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dazld/generator-cairn.git"
+        "url": "git+ssh://git@stash.akqa.net:7999/glwd/generator-cairn.git"
     },
-    "author": "Dan Peddle <dan@flarework.com>",
+    "author": "Dan Peddle <dan.peddle@akqa.com>",
     "license": "MIT",
     "keywords": [
         "yeoman-generator",
@@ -19,15 +19,8 @@
         "express",
         "gulp"
     ],
-    "bugs": {
-        "url": "https://github.com/dazld/generator-cairn/issues"
-    },
-    "homepage": "https://github.com/dazld/generator-cairn#readme",
+    "homepage": "https://stash.akqa.net/projects/GLWD/repos/generator-cairn/browse",
     "dependencies": {
-        "asciify": "^1.3.5",
         "yeoman-generator": "^0.22.5"
-    },
-    "devDependencies": {
-        "eslint-plugin-react": "^4.2.3"
     }
 }

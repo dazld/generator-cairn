@@ -1,7 +1,10 @@
 require('babel-core/register')();
-const server = require('./index').default;
+const makeServer = require('./index').default;
 const express = require('express');
+const liveReload = require('connect-livereload');
 const app = express();
+
+const server = makeServer(liveReload());
 
 app.use(express.static('static'));
 app.use(function (req, res, next) {
