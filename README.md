@@ -1,10 +1,8 @@
 # Cairn
 
-## A full stack of rocks.
+## What's this?
 
-## Installation
-
-This is a yeoman generator for making full stack react, redux and express apps.
+This is a yeoman generator for making express & js applications.
 
 It is a work in progress.
 
