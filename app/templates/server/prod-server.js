@@ -3,7 +3,6 @@ const makeServer = require('./index').default;
 const config = require('./lib/config').default;
 const express = require('express');
 const app = express();
-const basicAuth = require('basic-auth');
 
 const PORT = config.get('port');
 
@@ -24,6 +23,5 @@ app.use(server);
 
 
 app.listen(PORT, function() {
-    console.log('Magic happened');
     console.log(`Server up on port ${PORT}`);
 });

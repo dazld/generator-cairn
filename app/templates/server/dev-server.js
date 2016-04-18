@@ -21,4 +21,5 @@ app.use(server);
 
 app.listen(3030, function() {
     console.log('Magic happened');
+    console.log('dev server up on 3030');
 });
