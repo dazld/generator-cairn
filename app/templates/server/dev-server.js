@@ -19,7 +19,6 @@ app.use(function (req, res, next) {
 
 app.use(server);
 
-
 app.listen(3030, function() {
     console.log('Magic happened');
 });

@@ -2,7 +2,7 @@
     "name": "<%= title %>",
     "version": "1.0.0",
     "description": "Project generated with cairn",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -40,7 +40,7 @@
         "gulp-base64": "^0.1.3",
         "gulp-combine-mq": "^0.4.0",
         "gulp-connect": "^3.2.0",
-        "gulp-csso": "^1.1.0",
+        "gulp-csso": "^2.0.0",
         "gulp-debug": "^2.1.2",
         "gulp-if": "^2.0.0",
         "gulp-livereload": "^3.8.1",

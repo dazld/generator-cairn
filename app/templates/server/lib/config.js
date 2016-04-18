@@ -4,7 +4,9 @@ const config = makeConfig();
 const isProduction = process.env.NODE_ENV === 'production';
 
 config.set('isProduction', isProduction);
+config.set('apiUrl', process.env.API_URL || '/api');
 config.set('useVersionedResources', process.env.USE_VERSIONED_RESOURCES || isProduction);
 config.set('staticPrefix', process.env.STATIC_PREFIX || '/');
+config.set('port', process.env.PORT || 3030);
 
 export default config;
