@@ -31,9 +31,6 @@ module.exports = generators.Base.extend({
         };
 
         const processFile =  (root, filePath) => {
-            console.log(filePath.indexOf('_template') !== -1);
-
-
             const fullPath = path.resolve(root, filePath);
             const stats = fs.statSync(fullPath);
             const destFolder = root.replace(this.templatePath(),'');
