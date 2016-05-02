@@ -31,6 +31,9 @@ module.exports = generators.Base.extend({
         };
 
         const processFile =  (root, filePath) => {
+            console.log(filePath.indexOf('_template') !== -1);
+
+
             const fullPath = path.resolve(root, filePath);
             const stats = fs.statSync(fullPath);
             const destFolder = root.replace(this.templatePath(),'');
@@ -38,6 +41,9 @@ module.exports = generators.Base.extend({
             if (stats.isDirectory()) {
                 fs.readdirSync(fullPath).forEach(processFile.bind(null, fullPath));
             } else {
+                if (filePath.indexOf('_template') !== -1) {
+                    filePath = filePath.replace('_template','');
+                }
                 const destPath = path.join('.', destFolder, filePath);
                 this.template(fullPath, destPath, data);
             }
@@ -45,5 +51,12 @@ module.exports = generators.Base.extend({
 
         files.forEach(processFile.bind(null, tplPath));
 
+    },
+    install: function(){
+        this.log('Initializing your git repo...');
+        this.spawnCommand('git', ['init']);
+        this.log('Installing dependencies... this may take a while...');
+        this.spawnCommand('npm', ['install']);
+        this.log('All done. Thanks for playing.');
     }
 });
