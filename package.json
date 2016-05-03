@@ -8,9 +8,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@stash.akqa.net:7999/glwd/generator-cairn.git"
+        "url": "git+ssh://git@github.com:dazld/generator-cairn.git"
     },
-    "author": "Dan Peddle <dan.peddle@akqa.com>",
+    "author": "Dan Peddle <dan@flarework.com>",
     "license": "MIT",
     "keywords": [
         "yeoman-generator",
@@ -19,7 +19,7 @@
         "express",
         "gulp"
     ],
-    "homepage": "https://stash.akqa.net/projects/GLWD/repos/generator-cairn/browse",
+    "homepage": "https://github.com/dazld/generator-cairn",
     "dependencies": {
         "yeoman-generator": "^0.22.5"
     }
