@@ -1,6 +1,6 @@
 {
     "name": "generator-cairn",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "A full stack of rocks",
     "main": "index.js",
     "scripts": {
