@@ -8,6 +8,7 @@ It is a work in progress, and pull requests are welcome as long as they remain i
 
 ## Features
 
+- HTTPS self signed localhost on `4431`
 - full suite of gulp tasks
 - watchify accelerated browserify builds
 - libsass sass compilation
