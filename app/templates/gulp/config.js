@@ -22,6 +22,7 @@ const STATIC_FONTS = join(STATIC_DIR, 'fonts');
 const BROWSER_CONFIG = ['>1%', 'IE 9'];
 const LIVERELOAD_PORT = process.env.LIVERELOAD_PORT || 35729;
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+const USE_HTTPS = !!process.env.USE_HTTPS;
 
 const config = {
     BROWSER_CONFIG,
@@ -38,6 +39,7 @@ const config = {
     STATIC_JS,
     STATIC_FONTS,
     IS_PRODUCTION,
+    USE_HTTPS,
     USE_SOURCEMAPS: (typeof process.env.USE_SOURCEMAPS !== 'undefined') ? true : !IS_PRODUCTION
 };
 

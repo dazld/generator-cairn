@@ -3,12 +3,11 @@ const makeServer = require('./index').default;
 const express = require('express');
 const liveReload = require('connect-livereload');
 const app = express();
+const http = require('http');
 const https = require('https');
 const snakeoil = require('@dazld/snakeoil-certs');
-
-const server = makeServer(liveReload({
-    src: 'https://localhost:35729/livereload.js?snipver=1'
-}));
+const config = require('./lib/config').default;
+const server = makeServer(liveReload());
 
 app.use(express.static('static'));
 app.use(function (req, res, next) {
@@ -23,14 +22,16 @@ app.use(function (req, res, next) {
 
 app.use(server);
 
-https.createServer({
+const createServer = process.env.USE_HTTPS ? https.createServer.bind(https, {
     key: snakeoil.serviceKey,
     cert: snakeoil.certificate
-}, app).listen(3030, 'localhost', function(err) {
+}) : http.createServer.bind(http);
+
+createServer(app).listen(3030, function(err) {
     if (err) {
         console.log(err);
     } else {
         console.log('Magic happened');
-        console.log('https dev server up on https://localhost:3030');
+        console.log(`dev server up on ${config.get('useHttps') ? 'https':'http'}://localhost:3030`);
     }
 });
