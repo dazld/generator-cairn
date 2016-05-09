@@ -8,7 +8,7 @@ It is a work in progress, and pull requests are welcome as long as they remain i
 
 ## Features
 
-- HTTPS self signed localhost on `4431`
+- HTTPS self signed localhost dev environment including live reload 
 - full suite of gulp tasks
 - watchify accelerated browserify builds
 - libsass sass compilation
@@ -33,7 +33,11 @@ Make a new directory, cd into it.
 
 Yeoman will perform `git init` and `npm install` for you - this takes a while, so be prepared for a short wait.
 
-`gulp` - default task runs dev server, watches and builds.
+`gulp` - default task runs dev server, watches and builds. 
+
+* this is a HTTPS development environment * 
+`https://localhost:3030`
+
 
 ## Todo
 
