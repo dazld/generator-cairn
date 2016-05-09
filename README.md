@@ -38,6 +38,10 @@ Yeoman will perform `git init` and `npm install` for you - this takes a while, s
 `USE_HTTPS=true gulp` for running a *https* localhost server
 
 
+## Notes
+
+Sockets on iOS with a self signed cert - https://blog.httpwatch.com/2013/12/12/five-tips-for-using-self-signed-ssl-certificates-with-ios/
+
 ## Todo
 
 - Document other gulp tasks
