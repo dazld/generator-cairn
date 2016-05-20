@@ -1,6 +1,7 @@
 const generators = require('yeoman-generator');
 const path = require('path');
 const fs = require('fs');
+const updateNotifier = require('update-notifier');
 
 module.exports = generators.Base.extend({
     constructor: function() {
@@ -8,6 +9,9 @@ module.exports = generators.Base.extend({
         // this.config.save();
     },
     initializing: function() {
+        const pkg = require('../package.json');
+        const notifier = updateNotifier({pkg});
+        notifier.notify();
         this.log('I am a full stack react, redux & express generator.');
     },
     prompting: function() {
