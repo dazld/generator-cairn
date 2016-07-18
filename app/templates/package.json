@@ -3,12 +3,16 @@
     "version": "1.0.0",
     "description": "Project generated with cairn",
     "main": "app.js",
+    "engines": {
+        "node": "6.3.0"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Change Me",
     "license": "ISC",
     "dependencies": {
+        "@dazld/snakeoil-certs": "^1.0.2",
         "babel-plugin-transform-object-rest-spread": "^6.6.5",
         "babel-polyfill": "^6.7.2",
         "babel-preset-es2015": "^6.6.0",
@@ -19,7 +23,6 @@
         "mini-config": "^1.0.0"
     },
     "devDependencies": {
-        "@dazld/snakeoil-certs": "^1.0.2",
         "babelify": "^7.2.0",
         "browserify": "^13.0.0",
         "connect-livereload": "^0.5.4",

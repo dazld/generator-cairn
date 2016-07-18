@@ -1,27 +1,27 @@
 {
-  "name": "generator-cairn",
-  "version": "1.2.6",
-  "description": "A full stack of rocks",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:dazld/generator-cairn.git"
-  },
-  "author": "Dan Peddle <dan@flarework.com>",
-  "license": "MIT",
-  "keywords": [
-    "yeoman-generator",
-    "react",
-    "browserify",
-    "express",
-    "gulp"
-  ],
-  "homepage": "https://github.com/dazld/generator-cairn",
-  "dependencies": {
-    "update-notifier": "^0.7.0",
-    "yeoman-generator": "^0.22.5"
-  }
+    "name": "generator-cairn",
+    "version": "1.2.7",
+    "description": "A full stack of rocks",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:dazld/generator-cairn.git"
+    },
+    "author": "Dan Peddle <dan@flarework.com>",
+    "license": "MIT",
+    "keywords": [
+        "yeoman-generator",
+        "react",
+        "browserify",
+        "express",
+        "gulp"
+    ],
+    "homepage": "https://github.com/dazld/generator-cairn",
+    "dependencies": {
+        "update-notifier": "^0.7.0",
+        "yeoman-generator": "^0.22.5"
+    }
 }

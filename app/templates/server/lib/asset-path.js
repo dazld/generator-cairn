@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { resolve } from 'url';
 import config from './config';
 
 const latestManifest = config.get('useVersionedResources') ? require('../../static/rev-manifest.json') : {};
@@ -10,9 +10,9 @@ export default function assetPath(basePath) {
     let fullPath;
 
     if (config.get('useVersionedResources') && latestManifest.hasOwnProperty(basePath)) {
-        fullPath = join(staticPrefix, latestManifest[basePath]);
+        fullPath = resolve(staticPrefix, latestManifest[basePath]);
     } else {
-        fullPath = join(staticPrefix, basePath);
+        fullPath = resolve(staticPrefix, basePath);
     }
 
     return fullPath;

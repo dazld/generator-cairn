@@ -51,3 +51,12 @@ Sockets on iOS with a self signed cert - https://blog.httpwatch.com/2013/12/12/f
 ## Updating
 
 `npm install -g generator-cairn`
+
+
+# Changelog
+
+## 1.2.7
+
+- change from `path.join` to `url.resolve` in asset-path helper (windows support)
+- Moved `snakeoil-certs` to production dependencies
+- added default Node engine (6.3.0)
