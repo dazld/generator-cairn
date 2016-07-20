@@ -21,7 +21,6 @@ app.use(function (req, res, next) {
 
 app.use(server);
 
-
 app.listen(PORT, function() {
     console.log(`Server up on port ${PORT}`);
 });

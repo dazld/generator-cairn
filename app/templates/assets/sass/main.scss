@@ -1,4 +1,46 @@
 @import "../../node_modules/normalize.scss/normalize";
+
+$rhythm: 1rem;
+$baseFont: 'Scope One', serif;
+
+html {
+    font-family: $baseFont;
+    font-size: 14px;
+    min-height: 100%;
+    height: 100%;
+}
+
 body {
-    background: green;
+    height: 100%;
+    background: #313131;
+    color: #fafaff;
+}
+
+.header {
+    width: 100%;
+    min-height: 50vh;
+    height: 30vw;
+    background: url(https://unsplash.it/1600/900?image=998) center center no-repeat;
+    background-size: cover;
+}
+
+.app-root {
+    height: 100%;
+    .column {
+        padding: 0 5*$rhythm;
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+
+h1 {
+    font-family: $baseFont;
+    margin: $rhythm 0;
+    font-size: 4rem;
+}
+
+p {
+    margin: $rhythm 0;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }

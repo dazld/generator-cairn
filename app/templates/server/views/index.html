@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>${ title }</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="${assetPath('css/main.css')}">
-  </head>
-  <body>
-      <div id="app-root"></div>
-      <script type="text/javascript">
-          var cairnConfig = ${config};
-      </script>
-      <script type="text/javascript" src="${ assetPath('js/bundle.js') }"></script>
-  </body>
+      <meta charset="utf-8">
+      <title>${ title }</title>
+      <meta name="viewport" content="width=device-width">
+      <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+      <link rel="stylesheet" href="${assetPath('css/main.css')}">
+    </head>
+    <body>
+        <div class="app-root" id="root">${html}</div>
+        <script type="text/javascript">
+          var __CONFIG__ = ${config};
+          var __STATE__ = "{}";
+        </script>
+        <script type="text/javascript" src="${ assetPath('js/bundle.js') }" async></script>
+    </body>
 </html>

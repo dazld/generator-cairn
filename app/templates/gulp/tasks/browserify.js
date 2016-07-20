@@ -38,7 +38,7 @@ compiler.transform('envify', {
 
 function bundle() {
     return compiler.bundle()
-                    .on('error', notify.onError('Error: <%%= error.message %>'))
+                    .on('error', notify.onError('Error: <%= error.message %>'))
                     .on('error', function errorHandler(err) {
                         gutil.log(gutil.colors.red(`Error (${err.plugin}) - ${err.message}`));
                         this.emit('end');

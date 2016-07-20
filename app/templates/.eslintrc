@@ -9,6 +9,7 @@
         "comma-dangle": 0,
         "func-names": 0,
         "no-param-reassign": 1,
+        "global-require": 0,
         "max-len": 0,
         "prefer-rest-params": 0,
         "prefer-arrow-callback": 0,
@@ -16,6 +17,7 @@
         "indent": [2, 4, {
             "SwitchCase": 1
         }],
+        "react/jsx-indent": [2, 4],
         "react/jsx-indent-props": [2, 4],
         "react/jsx-closing-bracket-location": 0,
         "react/jsx-no-bind": 0
