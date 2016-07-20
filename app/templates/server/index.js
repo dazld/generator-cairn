@@ -29,7 +29,7 @@ export default function makeServer (middleware) {
         app.use(middleware);
     }
 
-    app.get('*', function(req, res) {
+    app.get('*', function(req, res, next) {
         const history = useRouterHistory(useQueries(createMemoryHistory))();
         const store = configureStore();
         const routes = createRoutes(history);
@@ -75,19 +75,27 @@ export default function makeServer (middleware) {
                             {<RouterContext {...renderProps} />}
                         </Provider>
                     );
-
-                    res.render('index', {
-                        locals: {
-                            html,
-                            title: 'cairn app',
-                            config: JSON.stringify(clientConfig),
-                            assetPath
-                        }
-                    });
-                    console.log(`200 - ${req.url}`);
+                    if (getCurrentUrl() === reqUrl) {
+                        res.render('index', {
+                            locals: {
+                                html,
+                                state: JSON.stringify(store.getState()),
+                                title: 'cairn app',
+                                config: JSON.stringify(clientConfig),
+                                assetPath
+                            }
+                        });
+                        console.log(`200 - ${req.url}`);
+                    } else {
+                        console.log(`302 - ${req.url} => ${getCurrentUrl()}`);
+                        res.redirect(302, getCurrentUrl());
+                    }
                 }).catch(function(err) {
-                    console.log(`500 - ${err.message}`);
+                    // or next(err) and use general error handler in express
+                    console.log(`500 - ${req.url} - ${err.message}`);
                     res.status(500).send(err.message);
+                }).finally(function() {
+                    unsubscribe();
                 });
             }
         });
