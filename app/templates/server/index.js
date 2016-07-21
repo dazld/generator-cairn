@@ -80,7 +80,7 @@ export default function makeServer (middleware) {
                             locals: {
                                 html,
                                 state: JSON.stringify(store.getState()),
-                                title: 'cairn app',
+                                title: '<%= title =%>',
                                 config: JSON.stringify(clientConfig),
                                 assetPath
                             }

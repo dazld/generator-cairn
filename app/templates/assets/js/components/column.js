@@ -13,7 +13,7 @@ class Column extends React.Component {
 }
 
 Column.propTypes = {
-    children: React.PropTypes.node
+    children: React.PropTypes.node.isRequired
 };
 
 export default Column;

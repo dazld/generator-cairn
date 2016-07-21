@@ -1,4 +1,5 @@
 import React from 'react';
+import Column from './column';
 
 class Header extends React.Component {
     constructor() {
@@ -7,7 +8,11 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <div className="header" />
+            <div className="header">
+                <Column>
+                    <h1>Cairn</h1>
+                </Column>
+            </div>
         );
     }
 }
