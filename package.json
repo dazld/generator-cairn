@@ -1,6 +1,6 @@
 {
     "name": "generator-cairn",
-    "version": "2.0.0-alpha",
+    "version": "2.0.0",
     "description": "A full stack of rocks",
     "main": "index.js",
     "scripts": {
@@ -23,5 +23,12 @@
     "dependencies": {
         "update-notifier": "^0.7.0",
         "yeoman-generator": "^0.22.5"
+    },
+    "devDependencies": {
+        "eslint": "^2.13.1",
+        "eslint-config-airbnb": "^9.0.1",
+        "eslint-plugin-import": "^1.11.0",
+        "eslint-plugin-jsx-a11y": "^1.5.5",
+        "eslint-plugin-react": "^5.2.2"
     }
 }

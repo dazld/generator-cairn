@@ -46,7 +46,7 @@ module.exports = generators.Base.extend({
                     filePath = filePath.replace('_template','');
                 }
                 const destPath = path.join('.', destFolder, filePath);
-                this.template(fullPath, destPath, data);
+                this.fs.copyTpl(fullPath, destPath, data);
             }
         };
 
@@ -58,6 +58,5 @@ module.exports = generators.Base.extend({
         this.spawnCommand('git', ['init']);
         this.log('Installing dependencies... this may take a while...');
         this.spawnCommand('npm', ['install']);
-        this.log('All done. Thanks for playing.');
     }
 });
