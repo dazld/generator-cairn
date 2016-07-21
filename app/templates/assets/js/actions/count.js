@@ -21,4 +21,4 @@ function makeAction(action) {
 
 
 export const add = makeAction(ADD);
-export const subtract = makeAction(ADD);
+export const subtract = makeAction(SUBTRACT);

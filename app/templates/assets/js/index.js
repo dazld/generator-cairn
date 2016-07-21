@@ -8,7 +8,7 @@ import configureStore from './store/configureStore';
 import createRoutes from './routes';
 
 
-const state = JSON.parse(window.__STATE__); // eslint-disable-line no-underscore-dangle
+const state = window.__STATE__; // eslint-disable-line no-underscore-dangle
 
 const store = configureStore(state);
 

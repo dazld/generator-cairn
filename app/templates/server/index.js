@@ -80,7 +80,7 @@ export default function makeServer (middleware) {
                             locals: {
                                 html,
                                 state: JSON.stringify(store.getState()),
-                                title: '<%= title.replace(' ','-') %>',
+                                title: 'Your App',
                                 config: JSON.stringify(clientConfig),
                                 assetPath
                             }
