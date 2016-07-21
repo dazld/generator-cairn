@@ -36,9 +36,13 @@ compiler.transform('envify', {
     _: 'purge'
 });
 
+function complete() {
+    gulp.run('serve');
+}
+
 function bundle() {
     return compiler.bundle()
-                    .on('error', notify.onError('Error: <%= error.message %>'))
+                    .on('error', notify.onError('Error: <%%= error.message %>'))
                     .on('error', function errorHandler(err) {
                         gutil.log(gutil.colors.red(`Error (${err.plugin}) - ${err.message}`));
                         this.emit('end');
@@ -48,7 +52,7 @@ function bundle() {
                     .pipe(gulpif(config.IS_PRODUCTION, uglify()))
                     .pipe(size())
                     .pipe(gulp.dest(config.STATIC_JS))
-                    .pipe(liveReload()); // @todo figure out a better way of refreshing server
+                    // .pipe(liveReload()); // @todo figure out a better way of refreshing server
 }
 
 compiler.on('log', gutil.log);
@@ -57,7 +61,7 @@ compiler.on('error', gutil.log);
 compiler.on('update', function() {
     console.log.apply(console, ['Updated: '].concat([].slice.call(arguments)));
     bundle();
-    // gulp.run('serve'); @todo should reload server too
+    gulp.run('serve');  // @todo should reload server too
 });
 
 gulp.task('js', ['clean:js'], () => bundle());
