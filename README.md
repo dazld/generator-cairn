@@ -10,6 +10,7 @@ It is a work in progress, and pull requests are welcome as long as they remain i
 
 - HTTP / HTTPS self signed localhost dev environment including live reload
 - full suite of gulp tasks
+- Server rendered redux & react
 - watchify accelerated browserify builds
 - libsass sass compilation
 - eslint rules
@@ -46,7 +47,7 @@ Sockets on iOS with a self signed cert - https://blog.httpwatch.com/2013/12/12/f
 
 - Document other gulp tasks
 - Document how config gets propagated from server render to frontend
-- Put skeleton react app in place
+- ~~Put skeleton react app in place~~
 
 ## Updating
 
