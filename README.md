@@ -55,6 +55,12 @@ Sockets on iOS with a self signed cert - https://blog.httpwatch.com/2013/12/12/f
 
 # Changelog
 
+## 2.0.0
+
+- Included server side rendered React
+- Included skeleton redux app & components
+- Included scss breakpoints
+
 ## 1.2.7
 
 - change from `path.join` to `url.resolve` in asset-path helper (windows support)
