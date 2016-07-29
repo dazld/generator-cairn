@@ -2,15 +2,15 @@
 
 ## What's this?
 
-This is a yeoman generator for making express & js applications. It's geared towards react / es6, but you can use it for making general single page apps too. There is a full suite of watching, livereloading, compilation and related gulp tasks. The express server renders html as you would expect, and they can be found in the `server/views` folder.
+This is a yeoman generator for making express & js applications. It's geared towards react & redux / es6, but you can use it for making general single page apps too. There is a full suite of watching, livereloading, compilation and related gulp tasks. The express server renders html as you would expect, and they can be found in the `server/views` folder.
 
 It is a work in progress, and pull requests are welcome as long as they remain in the spirit of the generator.
 
 ## Features
 
+- Server rendered redux & react
 - HTTP / HTTPS self signed localhost dev environment including live reload
 - full suite of gulp tasks
-- Server rendered redux & react
 - watchify accelerated browserify builds
 - libsass sass compilation
 - eslint rules
@@ -56,14 +56,18 @@ Sockets on iOS with a self signed cert - https://blog.httpwatch.com/2013/12/12/f
 
 # Changelog
 
+## 2.0.2
+
+- update config to be single module, instead of split across server / client.
+
 ## 2.0.0
 
 - Included server side rendered React
-- Included skeleton redux app & components
+- Included skeleton `redux` app & components
+- Include component `fetchData` inspection to gather data server side for render
 - Included scss breakpoints
 
 ## 1.2.7
 
 - change from `path.join` to `url.resolve` in asset-path helper (windows support)
-- Moved `snakeoil-certs` to production dependencies
 - added default Node engine (6.3.0)

@@ -1,5 +1,5 @@
 import { resolve } from 'url';
-import config from './config';
+import config from '../../assets/js/lib/config';
 
 const latestManifest = config.get('useVersionedResources') ? require('../../static/rev-manifest.json') : {};
 

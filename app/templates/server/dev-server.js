@@ -6,7 +6,7 @@ const app = express();
 const http = require('http');
 const https = require('https');
 const snakeoil = require('@dazld/snakeoil-certs');
-const config = require('./lib/config').default;
+const config = require('../assets/js/lib/config').default;
 const server = makeServer(liveReload());
 
 app.use(express.static('static'));

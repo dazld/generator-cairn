@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import configureStore from '../assets/js/store/configureStore';
 import createRoutes from '../assets/js/routes';
 import assetPath from './lib/asset-path';
-import config from './lib/config';
+import config from '../assets/js/lib/config';
 
 import Promise from 'bluebird';
 
