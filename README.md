@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/generator-cairn.svg)](https://badge.fury.io/js/generator-cairn)
+
 # Cairn
 
 ## What's this?
