@@ -1,6 +1,6 @@
 require('babel-core/register')();
 const makeServer = require('./index').default;
-nst config = require('../assets/js/lib/config').default;
+const config = require('../assets/js/lib/config').default;
 const express = require('express');
 const app = express();
 
