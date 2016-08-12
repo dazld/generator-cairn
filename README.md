@@ -58,6 +58,10 @@ Sockets on iOS with a self signed cert - https://blog.httpwatch.com/2013/12/12/f
 
 # Changelog
 
+## 2.0.4
+
+- Tweak live reloading of server process. Swap out dev server only when new process is ready, and live reload straight away on client.
+
 ## 2.0.2
 
 - update config to be single module, instead of split across server / client.

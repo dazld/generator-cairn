@@ -27,11 +27,13 @@ const createServer = process.env.USE_HTTPS ? https.createServer.bind(https, {
     cert: snakeoil.certificate
 }) : http.createServer.bind(http);
 
-createServer(app).listen(3030, function(err) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('Magic happened');
-        console.log(`dev server up on ${config.get('useHttps') ? 'https':'http'}://localhost:3030`);
-    }
-});
+console.log('Magic happened');
+setTimeout(function() {
+    createServer(app).listen(3030, function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(`dev server up on ${config.get('useHttps') ? 'https' : 'http'}://localhost:3030`);
+        }
+    });
+}, 500);

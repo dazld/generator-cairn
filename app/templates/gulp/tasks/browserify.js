@@ -52,7 +52,7 @@ function bundle() {
                     .pipe(gulpif(config.IS_PRODUCTION, uglify()))
                     .pipe(size())
                     .pipe(gulp.dest(config.STATIC_JS))
-                    // .pipe(liveReload()); // @todo figure out a better way of refreshing server
+                    .pipe(liveReload()); // @todo figure out a better way of refreshing server
 }
 
 compiler.on('log', gutil.log);
